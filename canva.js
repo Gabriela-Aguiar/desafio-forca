@@ -2,10 +2,6 @@ class ForcaCanvas {
     constructor(palavraSecreta) {
       this.c = document.getElementById('forca')
       this.context = this.c.getContext('2d');
-      this.context.strokeStyle = 'green';
-      this.context.fillStyle = "orange"
-      this.context.strokeRect(0, 0, 800, 1200) 
-      this.context.fill()  
       this.palavraSecreta=palavraSecreta;
       // ... your code goes here
       this.criarLousa();
@@ -14,8 +10,9 @@ class ForcaCanvas {
     
     criarLousa() {
       // ... your code goes here
-      this.context.clearRect(0, 0, 800, 1200);
+      this.context.clearRect(0, 0, 1200, 1200);
       this.desenharLinhas();
+
       
     }
   
@@ -23,6 +20,8 @@ class ForcaCanvas {
       // ... your code goes here
       let x = 300;
       let y = 700;
+      this.context.strokeStyle = 'black';
+      this.context.strokeRect(0, 0, 1200, 1200) 
       
       for(let i= 0; i < forca.palavraSecreta.length; i++){
           console.log(forca.palavraSecreta)
@@ -62,15 +61,9 @@ class ForcaCanvas {
   
     fimDeJogo() {
       // ... your code goes here
-      let gameOverImg = new Image();
-      gameOverImg.src ="../images/gameover.png";
-      this.context.drawImage(gameOverIMg, 200, 200)
     }
   
     vitoria() {
       // ... your code goes here
-      let winImg = new Image();
-      winImg.src ="../images/awesome.png";
-      this.context.drawImage(winImg, 200, 100)
     }
   }
