@@ -24,10 +24,13 @@ class ForcaCanvas {
       this.context.strokeRect(0, 0, 1200, 1200) 
       
       for(let i= 0; i < forca.palavraSecreta.length; i++){
-          console.log(forca.palavraSecreta)
-
+          x = x+100;
+          this.context.moveTo(x,y)
+          this.context.lineTo(x+80,y)
+          this.context.stroke()
+         
       }
-      
+      x=300
       
     }
   
