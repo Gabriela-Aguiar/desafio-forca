@@ -68,17 +68,15 @@ class Forca {
   
   if (botaoJogar) {
     botaoJogar.addEventListener('click', event => {
+      forca = new Forca(['alura', 'caelum', 'programacao', 'html', 'javascript', 'css']);
+  
+      // HINT (uncomment when start working on the canvas portion of the lab)
+      forca.palavraSecreta = forca.escolherPalavra();
+      forcaCanvas = new ForcaCanvas(forca.palavraSecreta);
+      
 
       // ... your code goes here
     });
-    forca = new Forca(['alura', 'caelum', 'programacao', 'html', 'javascript', 'css']);
-  
-    // HINT (uncomment when start working on the canvas portion of the lab)
-    forca.palavraSecreta = forca.escolherPalavra();
-    forcaCanvas = new ForcaCanvas(forca.palavraSecreta);
-    
-
-    forcaCanvas.desenharForca();
   }
   
   document.addEventListener('keydown', e => {

@@ -60,55 +60,77 @@ class ForcaCanvas {
     desenharForca() {
       // ... your code goes here
       if (true){
-        this.context.beginPath();
-        this.context.arc(150, 300, 50, 0, Math.PI*2,false);
-        this.context.fill();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(50,200);
-        this.context.lineTo(50,700)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(0,200);
-        this.context.lineTo(150,200)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(0,700);
-        this.context.lineTo(150,700)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,200);
-        this.context.lineTo(150,300)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,300);
-        this.context.lineTo(150,500)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,350);
-        this.context.lineTo(100,450)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,350);
-        this.context.lineTo(200,450)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,500);
-        this.context.lineTo(100,600)
-        this.context.stroke();
-        this.context.closePath();
-        this.context.beginPath();
-        this.context.moveTo(150,500);
-        this.context.lineTo(200,600)
-        this.context.stroke();
-        this.context.closePath();
+        console.log(this.palavraErrada)
+        if(this.palavraErrada.length === 1){
+            this.context.beginPath();
+            this.context.arc(150, 300, 50, 0, Math.PI*2,false);
+            this.context.fill();
+            this.context.closePath();
+    
+            this.context.beginPath();
+            this.context.moveTo(50,200);
+            this.context.lineTo(50,700)
+            this.context.stroke();
+            this.context.closePath();
+    
+            this.context.beginPath();
+            this.context.moveTo(0,200);
+            this.context.lineTo(150,200)
+            this.context.stroke();
+            this.context.closePath();
+    
+            this.context.beginPath();
+            this.context.moveTo(0,700);
+            this.context.lineTo(150,700)
+            this.context.stroke();
+            this.context.closePath();
+    
+            this.context.beginPath();
+            this.context.moveTo(150,200);
+            this.context.lineTo(150,300)
+            this.context.stroke();
+            this.context.closePath();
+        } 
+        
+        if(this.palavraErrada.length === 2) {
+            this.context.beginPath();
+            this.context.moveTo(150,300);
+            this.context.lineTo(150,500)
+            this.context.stroke();
+            this.context.closePath();
+        }
+
+        if(this.palavraErrada.length === 3){
+            this.context.beginPath();
+            this.context.moveTo(150,350);
+            this.context.lineTo(100,450)
+            this.context.stroke();
+            this.context.closePath();
+        }
+
+        if(this.palavraErrada.length === 4){
+            this.context.beginPath();
+            this.context.moveTo(150,350);
+            this.context.lineTo(200,450)
+            this.context.stroke();
+            this.context.closePath();
+        }
+
+        if(this.palavraErrada.length === 5){
+            this.context.beginPath();
+            this.context.moveTo(150,500);
+            this.context.lineTo(100,600)
+            this.context.stroke();
+            this.context.closePath();
+        }
+
+        if(this.palavraErrada.length === 6){
+            this.context.beginPath();
+            this.context.moveTo(150,500);
+            this.context.lineTo(200,600)
+            this.context.stroke();
+            this.context.closePath();
+        }
         
       }
     }
